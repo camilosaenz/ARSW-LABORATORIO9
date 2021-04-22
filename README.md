@@ -1,6 +1,9 @@
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 
+Carlos Andres Amorocho Amorocho
+Rubian Camilo Saenz Rodriguez
+
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
 
 ### Dependencias
@@ -21,9 +24,33 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part3/part3-function-configii.png)
 
+Instalamos las funciones de aplicaciones.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Punto%201.PNG?raw=true">
+</p>
+
+Hosting
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Punto%201%20-%20II.PNG?raw=true">
+</p>
+
+Finalmente se termina de crear el recurso.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Punto%201%20-%20III.PNG?raw=true">
+</p>
+
 2. Instale la extensión de **Azure Functions** para Visual Studio Code.
 
 ![](images/part3/part3-install-extension.png)
+
+Luego en Visual Studio Code instalamos el recurso para Azure.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Punto%202.PNG?raw=true">
+</p>
 
 3. Despliegue la Function de Fibonacci a Azure usando Visual Studio Code. La primera vez que lo haga se le va a pedir autenticarse, siga las instrucciones.
 
@@ -31,13 +58,35 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part3/part3-deploy-function-2.png)
 
+Realizamos el despliegue de la aplicación Fibonacci.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Punto%203%20-%20I.PNG?raw=true">
+</p>
+
 4. Dirijase al portal de Azure y pruebe la function.
 
 ![](images/part3/part3-test-function.png)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
+Luego Realizamos por medio de newman las respectivas pruebas.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/newman.PNG?raw=true">
+</p>
+
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+
+Y podemos ver las metricas.
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Memory.PNG?raw=true">
+</p>
+
+<p align="center"> 
+  <img src="https://github.com/camilosaenz/ARSW-LABORATORIO9/blob/master/images/img/Metricas.PNG?raw=true">
+</p>
 
 **Preguntas**
 
@@ -67,5 +116,3 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     
 * ¿Cómo funciona el sistema de facturación de las Function App?
     Azure Functions hace la facturación según el consumo de los recursos y las ejecuciones por segundo, donde los precios del plan de consumo incluyen 1 millones de solicitudes y 400.000 GB-segundos de consumo de recursos gratuitos por mes. Functions hace la facturación según el consumo de recursos medido en GB-s, donde el consumo de recursos se calcula multiplicando el tamaño medio de memoria en GB por el tiempo en milisegundos que dura la ejecución de la función. Y la memoria que una función utiliza se mide redondeando a los 128 MB más cercanos hasta un tamaño de memoria máximo de 1.536 MB, y el tiempo de ejecución se redondea a los 1 ms más cercanos y para la ejecución de una única función, el tiempo de ejecución mínimo es de 100 ms y la memoria mínima es de 128 MB, respectivamente.  
-    
-* Informe
